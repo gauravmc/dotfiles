@@ -2,12 +2,29 @@
 set nocompatible " No vi compatility
 let mapleader=","
 
-execute pathogen#infect()
-
 " Go syntax
 filetype off
 filetype plugin indent off
-set runtimepath+=$GOROOT/misc/vim
+
+" vundle
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+Bundle 'gmarik/vundle'
+
+" My bundles
+Bundle 'tpope/vim-fugitive'
+Bundle 'tpope/vim-rails.git'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'mileszs/ack.vim'
+Bundle 'majutsushi/tagbar'
+Bundle 'kien/ctrlp.vim'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'airblade/vim-gitgutter'
+Bundle 'tpope/vim-surround'
+
+set rtp+=$GOROOT/misc/vim
 filetype plugin indent on
 syntax on
 
