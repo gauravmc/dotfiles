@@ -2,7 +2,6 @@
 set nocompatible " No vi compatility
 let mapleader=","
 
-" Go syntax
 filetype off
 filetype plugin indent off
 
@@ -23,8 +22,13 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-endwise'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-unimpaired'
 
+" Go syntax
 set rtp+=$GOROOT/misc/vim
+
 filetype plugin indent on
 syntax on
 
@@ -42,8 +46,14 @@ set noswapfile
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
+" window minimum size
 set winwidth=80
 set winheight=30
+
+" Stop vim from automatically adding comment syntax
+" upon pressing enter and O/o
+set formatoptions-=o
+set formatoptions-=r
 
 " Color
 set background=light
@@ -75,6 +85,16 @@ nnoremap <leader>gc :Gcommit<CR>
 " tagbar toggle
 nnoremap <silent> <leader>t :TagbarToggle<CR>
 
+" Bubble single lines
+nmap <C-Down> ]e
+nmap <C-Up> [e
+" Bubble multiple lines
+vmap <C-Up> [egv
+vmap <C-Down> ]egv
+
+" Visually select the text that was last edited/pasted
+nnoremap gV `[v`]
+
 " ag over grep and ack
 set grepprg=ag\ --nogroup\ --nocolor
 nnoremap <leader>f :Ack<space>
@@ -89,4 +109,6 @@ let g:ctrlp_custom_ignore = {
   \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$',
   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
   \ }
+
+" Make CtrlP plugin use ag
 " let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
