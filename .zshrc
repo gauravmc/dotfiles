@@ -67,3 +67,16 @@ export PATH="/Users/gaurav/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# Aliases
+alias be="bundle exec"
+alias gl="git log --date=short --pretty=format:'%Cgreen%h %Cblue%cd %Cred%an%Creset: %s'"
+alias gdc="git diff --cached"
+alias ga="git add -A"
+alias gc="git commit"
+alias gs="git status"
+alias gd="git diff"
+alias vim="mvim -v"
+
+# go lang
+export PATH=$PATH:/usr/local/go/bin
+export GOROOT=/usr/local/go
