@@ -25,12 +25,15 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-endwise'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-unimpaired'
+Bundle 'peterjm/gitignore.vim'
 
 " Go syntax
 set rtp+=$GOROOT/misc/vim
 
 filetype plugin indent on
 syntax on
+
+set wildignore+=*/generated/*
 
 " line numbers
 set number
@@ -59,7 +62,9 @@ set formatoptions-=r
 set background=light
 colorscheme solarized
 
-set wildignore+=tmp/*,*.so,*.swp,*.zip,log/*,generated/*
+set showmatch
+set incsearch
+set hlsearch
 
 " get current directory anywhere
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
