@@ -76,7 +76,8 @@ alias gc="git commit"
 alias gs="git status"
 alias gd="git diff"
 alias vim="mvim -v"
-alias st="be spring testunit"
+alias spt="be spring testunit"
+alias sp="be spring"
 
 # go lang
 export PATH=$PATH:/usr/local/go/bin
