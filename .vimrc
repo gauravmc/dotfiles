@@ -83,10 +83,10 @@ nnoremap <leader>D :tabclose<cr>
 nnoremap <leader><leader> <c-^>
 
 " Move around splits with <c-hjkl>
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
+nnoremap <s-j> <c-w>j
+nnoremap <s-k> <c-w>k
+nnoremap <s-h> <c-w>h
+nnoremap <s-l> <c-w>l
 
 " Git
 nnoremap <leader>gd :Gdiff<CR>
