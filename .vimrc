@@ -27,6 +27,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'peterjm/gitignore.vim'
 Bundle 'matze/vim-move'
+Bundle 'scrooloose/nerdtree'
 
 " Go syntax
 set rtp+=$GOROOT/misc/vim
@@ -103,6 +104,9 @@ nnoremap <silent> <leader>t :TagbarToggle<CR>
 
 " Visually select the text that was last edited/pasted
 nnoremap gV `[v`]
+
+" shell shortcut
+map <leader>s <c-z>
 
 " ag over grep and ack
 set grepprg=ag\ --nogroup\ --nocolor
