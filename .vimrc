@@ -26,6 +26,7 @@ Bundle 'tpope/vim-endwise'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'peterjm/gitignore.vim'
+Bundle 'matze/vim-move'
 
 " Go syntax
 set rtp+=$GOROOT/misc/vim
@@ -100,13 +101,6 @@ imap <c-s> <esc>:w<CR>
 " tagbar toggle
 nnoremap <silent> <leader>t :TagbarToggle<CR>
 
-" Bubble single lines
-nmap <C-Down> ]e
-nmap <C-Up> [e
-" Bubble multiple lines
-vmap <C-Up> [egv
-vmap <C-Down> ]egv
-
 " Visually select the text that was last edited/pasted
 nnoremap gV `[v`]
 
@@ -127,3 +121,6 @@ let g:ctrlp_custom_ignore = {
 
 " Make CtrlP plugin use ag
 " let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+" Vim move plugin override default modifier
+let g:move_key_modifier = 'C'
