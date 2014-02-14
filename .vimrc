@@ -64,7 +64,7 @@ colorscheme solarized
 
 set showmatch
 set incsearch
-set hlsearch
+set laststatus=2
 
 " get current directory anywhere
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
@@ -92,6 +92,10 @@ nnoremap <c-l> <c-w>l
 nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit<CR>
+
+" save
+map <c-s> <esc>:w<CR>
+imap <c-s> <esc>:w<CR>
 
 " tagbar toggle
 nnoremap <silent> <leader>t :TagbarToggle<CR>
