@@ -65,6 +65,7 @@ set background=light
 colorscheme solarized
 
 set showmatch
+set matchtime=1
 set incsearch
 set laststatus=2
 
