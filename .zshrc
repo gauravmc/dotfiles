@@ -46,6 +46,7 @@ alias gd="git diff"
 alias gb="git branch"
 alias spt="be spring testunit"
 alias sp="be spring"
+alias to="script/testonly"
 
 # go lang
 export PATH=$PATH:/usr/local/go/bin

@@ -1,0 +1,19 @@
+[user]
+  name = Gaurav Chande
+  email = gmail@gauravchande.com
+[color]
+  ui = true
+[core]
+  editor = vim
+[hub]
+  protocol = https
+[push]
+  default = current
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	di = diff
+[merge]
+	tool = vimdiff
