@@ -17,3 +17,5 @@
 	di = diff
 [merge]
 	tool = vimdiff
+[pull]
+	rebase = true

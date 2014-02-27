@@ -24,10 +24,9 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-endwise'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-unimpaired'
 Bundle 'peterjm/gitignore.vim'
 Bundle 'matze/vim-move'
-Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-commentary'
 
 " Go syntax
 set rtp+=$GOROOT/misc/vim
@@ -53,7 +52,7 @@ set backspace=indent,eol,start
 
 " window minimum size
 set winwidth=80
-set winheight=30
+set winheight=40
 
 " Stop vim from automatically adding comment syntax
 " upon pressing enter and O/o
@@ -113,6 +112,10 @@ map <leader>s <c-z>
 set grepprg=ag\ --nogroup\ --nocolor
 nnoremap <leader>f :Ack<space>
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" have to paste code from github or something sometimes
+map <leader>p :set paste<CR>
+map <leader>P :set nopaste<CR>
 
 """""""
 " CtrlP
