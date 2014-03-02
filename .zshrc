@@ -51,6 +51,7 @@ alias to="script/testonly"
 # go lang
 export PATH=$PATH:/usr/local/go/bin
 export GOROOT=/usr/local/go
+export GOPATH=$HOME/Code/go
 
 # Disable flow control commands (keeps C-s from freezing everything)
 stty start undef
