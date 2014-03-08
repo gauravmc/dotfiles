@@ -27,6 +27,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'peterjm/gitignore.vim'
 Bundle 'matze/vim-move'
 Bundle 'tpope/vim-commentary'
+Bundle 'scrooloose/nerdtree'
 
 " Go syntax
 set rtp+=$GOROOT/misc/vim
