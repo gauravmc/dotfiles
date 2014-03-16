@@ -110,7 +110,7 @@ nnoremap gV `[v`]
 map <leader>s <c-z>
 
 " ag over grep and ack
-set grepprg=ag\ --nogroup\ --nocolor
+set grepprg=ag\ --nogroup\ --nocolor\ --column
 nnoremap <leader>f :Ack<space>
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
@@ -123,13 +123,13 @@ map <leader>P :set nopaste<CR>
 """""""
 
 " Ignore some folders and files for CtrlP indexing
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$',
-  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
-  \ }
+" let g:ctrlp_custom_ignore = {
+"   \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$',
+"   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+"   \ }
 
 " Make CtrlP plugin use ag
-" let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
 " Vim move plugin override default modifier
 let g:move_key_modifier = 'C'
