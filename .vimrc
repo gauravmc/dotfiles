@@ -24,7 +24,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-endwise'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'peterjm/gitignore.vim'
+" Bundle 'peterjm/gitignore.vim'
 Bundle 'matze/vim-move'
 Bundle 'tpope/vim-commentary'
 Bundle 'scrooloose/nerdtree'
@@ -35,7 +35,7 @@ set rtp+=$GOROOT/misc/vim
 filetype plugin indent on
 syntax on
 
-set wildignore+=*/generated/*
+set wildignore+=*/generated/*,*/tmp/*,*.so,*.swp,*.zip,*/log/*,*/.git/*,*/vendor/*,*/public/*
 
 " line numbers
 set number
@@ -118,18 +118,21 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 map <leader>p :set paste<CR>
 map <leader>P :set nopaste<CR>
 
+" paste multiple times
+xnoremap p pgvy
+
+" Vim move plugin override default modifier
+let g:move_key_modifier = 'C'
+
 """""""
 " CtrlP
 """""""
 
 " Ignore some folders and files for CtrlP indexing
 " let g:ctrlp_custom_ignore = {
-"   \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$',
+"   \ 'dir':  '\.git$\|\.yardoc\|log\|tmp$',
 "   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
 "   \ }
 
 " Make CtrlP plugin use ag
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-" Vim move plugin override default modifier
-let g:move_key_modifier = 'C'
+" let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'

@@ -56,3 +56,5 @@ export GOPATH=$HOME/Code/go
 # Disable flow control commands (keeps C-s from freezing everything)
 stty start undef
 stty stop undef
+
+export LOG_LEVEL=debug
