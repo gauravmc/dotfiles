@@ -35,7 +35,7 @@ set rtp+=$GOROOT/misc/vim
 filetype plugin indent on
 syntax on
 
-set wildignore+=*/generated/*,*/tmp/*,*.so,*.swp,*.zip,*/log/*,*/.git/*,*/vendor/*,*/public/*
+set wildignore+=*/generated/*,*/tmp/*,*.so,*.swp,*.zip,*/log/*,*/.git/*,*/vendor/*,*/public/*,*/tags/*
 
 " line numbers
 set number
