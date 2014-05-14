@@ -53,9 +53,8 @@ export PATH=$PATH:/usr/local/go/bin
 export GOROOT=/usr/local/go
 export GOPATH=$HOME/Code/go
 export LOG_LEVEL=debug
+export EDITOR=vim
 
 # Disable flow control commands (keeps C-s from freezing everything)
 stty start undef
 stty stop undef
-
-export LOG_LEVEL=debug
