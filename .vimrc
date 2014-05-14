@@ -35,7 +35,7 @@ set rtp+=$GOROOT/misc/vim
 filetype plugin indent on
 syntax on
 
-set wildignore+=*/generated/*,*/tmp/*,*.so,*.swp,*.zip,*/log/*,*/.git/*,*/vendor/*,*/public/*,*/tags/*,*/node_modules/*,*/doc/*
+set wildignore+=*/generated/*,*/tmp/*,*.so,*.swp,*.zip,*/log/*,*/.git/*,*/public/*,*/tags/*,*/node_modules/*,*/doc/*
 
 " line numbers
 set number
@@ -61,7 +61,7 @@ set formatoptions-=o
 set formatoptions-=r
 
 " Color
-set background=light
+set background=dark
 colorscheme solarized
 
 set showmatch
