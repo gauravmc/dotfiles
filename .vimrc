@@ -68,6 +68,7 @@ set showmatch
 set matchtime=1
 set incsearch
 set laststatus=2
+set hidden
 
 " get current directory anywhere
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
