@@ -28,6 +28,7 @@ Plugin 'matze/vim-move'
 Plugin 'tpope/vim-commentary'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/ruby-matchit'
+Plugin 'AndrewRadev/vim-eco'
 
 " Go syntax
 set rtp+=$GOROOT/misc/vim

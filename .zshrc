@@ -58,3 +58,6 @@ export EDITOR=vim
 # Disable flow control commands (keeps C-s from freezing everything)
 stty start undef
 stty stop undef
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
