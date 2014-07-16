@@ -62,7 +62,7 @@ set formatoptions-=o
 set formatoptions-=r
 
 " Color
-set background=light
+set background=dark
 colorscheme solarized
 
 set showmatch
@@ -137,4 +137,4 @@ let g:move_key_modifier = 'C'
 "   \ }
 
 " Make CtrlP plugin use ag
-" let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
