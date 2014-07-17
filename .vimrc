@@ -80,6 +80,8 @@ command! GdiffInTab tabedit %|vsplit|Gdiff
 nnoremap <leader>d :GdiffInTab<cr>
 nnoremap <leader>D :tabclose<cr>
 
+command! W write
+
 """""""""""""""""""
 " Misc Key Mappings
 """""""""""""""""""
