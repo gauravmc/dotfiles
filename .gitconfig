@@ -5,6 +5,7 @@
   ui = true
 [core]
   editor = vim
+	excludesfile = /Users/gaurav/.gitignore_global
 [hub]
   protocol = https
 [push]

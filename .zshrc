@@ -47,6 +47,7 @@ alias gb="git branch"
 alias spt="be spring testunit"
 alias sp="be spring"
 alias to="script/testonly"
+alias pc="be pry -r ./config/environment"
 
 # go lang
 export PATH=$PATH:/usr/local/go/bin
