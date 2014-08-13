@@ -97,7 +97,6 @@ nnoremap <s-h> <c-w>h
 nnoremap <s-l> <c-w>l
 
 " Git
-nnoremap <leader>gd :Gdiff<CR>
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit<CR>
 
