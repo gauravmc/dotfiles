@@ -103,6 +103,8 @@ nnoremap <s-l> <c-w>l
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit<CR>
 
+nnoremap <leader>n :NERDTree<CR>
+
 " save
 map <c-s> <esc>:w<CR>
 imap <c-s> <esc>:w<CR>
