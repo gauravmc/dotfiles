@@ -72,6 +72,9 @@ set incsearch
 set laststatus=2
 set hidden
 
+" Yank copies to clipboard as well
+set clipboard=unnamed
+
 " get current directory anywhere
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 
