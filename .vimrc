@@ -71,6 +71,7 @@ set matchtime=1
 set incsearch
 set laststatus=2
 set hidden
+set autoread
 
 " Yank copies to clipboard as well
 set clipboard=unnamed
@@ -103,8 +104,6 @@ nnoremap <s-l> <c-w>l
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit<CR>
 
-nnoremap <leader>n :NERDTree<CR>
-
 " save
 map <c-s> <esc>:w<CR>
 imap <c-s> <esc>:w<CR>
@@ -117,6 +116,10 @@ nnoremap gV `[v`]
 
 " shell shortcut
 map <leader>s <c-z>
+
+" Miscellaneous
+nnoremap <leader>n :NERDTree<CR>
+nnoremap <leader>r :windo e<CR>
 
 " ag over grep and ack
 set grepprg=ag\ --nogroup\ --nocolor\ --column
