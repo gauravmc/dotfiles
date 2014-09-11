@@ -26,6 +26,7 @@ if [[ "$PLATFORM" == "Darwin" ]]; then
   export PATH="/Users/gaurav/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/$GOPATH/bin:$PATH"
   alias vim="mvim -v"
 elif [[ "$PLATFORM" == "Linux" ]]; then
+  export GOPATH=$HOME/src/golang
   export EDITOR='vim'
 fi
 
