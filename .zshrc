@@ -20,8 +20,10 @@ source $ZSH/oh-my-zsh.sh
 export PLATFORM=`uname`
 
 if [[ "$PLATFORM" == "Darwin" ]]; then
-  export PATH="/Users/gaurav/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin"
   export EDITOR='mvim'
+  export GOROOT=/usr/local/go
+  export GOPATH=$HOME/Code/golang
+  export PATH="/Users/gaurav/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/$GOPATH/bin:$PATH"
   alias vim="mvim -v"
 elif [[ "$PLATFORM" == "Linux" ]]; then
   export EDITOR='vim'
@@ -49,12 +51,7 @@ alias sp="be spring"
 alias to="script/testonly"
 alias pc="be pry -r ./config/environment"
 
-# go lang
-export PATH=$PATH:/usr/local/go/bin
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/Code/go
 export LOG_LEVEL=debug
-export EDITOR=vim
 
 # Disable flow control commands (keeps C-s from freezing everything)
 stty start undef
