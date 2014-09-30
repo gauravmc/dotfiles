@@ -27,6 +27,7 @@ if [[ "$PLATFORM" == "Darwin" ]]; then
   alias vim="mvim -v"
 elif [[ "$PLATFORM" == "Linux" ]]; then
   export GOPATH=$HOME/src/golang
+  export PATH="$PATH:$GOPATH/bin"
   export EDITOR='vim'
 fi
 

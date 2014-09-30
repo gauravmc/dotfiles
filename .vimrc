@@ -29,6 +29,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/ruby-matchit'
 Plugin 'AndrewRadev/vim-eco'
+Plugin 'tpope/vim-bundler'
 
 " Go syntax
 set rtp+=$GOROOT/misc/vim
@@ -40,7 +41,7 @@ syntax on
 set wildignore+=*/generated/*,*/tmp/*,*.so,*.swp,*.zip,*/log/*,*/.git/*,*/public/*,*/tags/*,*/node_modules/*,*/doc/*
 
 " line numbers
-set number
+" set number
 
 " Softtabs
 set tabstop=2
