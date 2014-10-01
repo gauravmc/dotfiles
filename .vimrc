@@ -17,7 +17,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails.git'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'mileszs/ack.vim'
-Plugin 'majutsushi/tagbar'
 Plugin 'kien/ctrlp.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'airblade/vim-gitgutter'
@@ -30,6 +29,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/ruby-matchit'
 Plugin 'AndrewRadev/vim-eco'
 Plugin 'tpope/vim-bundler'
+Plugin 'wincent/command-t'
 
 " Go syntax
 set rtp+=$GOROOT/misc/vim
@@ -38,7 +38,7 @@ call vundle#end()
 filetype plugin indent on
 syntax on
 
-set wildignore+=*/generated/*,*/tmp/*,*.so,*.swp,*.zip,*/log/*,*/.git/*,*/public/*,*/tags/*,*/node_modules/*,*/doc/*
+set wildignore+=*/generated/*,*/tmp/*,*.so,*.swp,*.zip,*/log/*,*/.git/*,*/public/*,*/tags/*,*/node_modules/*,*/doc/*,*/vendor/*
 
 " line numbers
 " set number
@@ -108,9 +108,6 @@ nnoremap <leader>gc :Gcommit<CR>
 " save
 map <c-s> <esc>:w<CR>
 imap <c-s> <esc>:w<CR>
-
-" tagbar toggle
-nnoremap <silent> <leader>t :TagbarToggle<CR>
 
 " Visually select the text that was last edited/pasted
 nnoremap gV `[v`]
