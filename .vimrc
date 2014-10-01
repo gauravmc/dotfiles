@@ -17,7 +17,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails.git'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'mileszs/ack.vim'
-Plugin 'kien/ctrlp.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-surround'
@@ -133,16 +132,3 @@ xnoremap p pgvy
 
 " Vim move plugin override default modifier
 let g:move_key_modifier = 'C'
-
-"""""""
-" CtrlP
-"""""""
-
-" Ignore some folders and files for CtrlP indexing
-" let g:ctrlp_custom_ignore = {
-"   \ 'dir':  '\.git$\|\.yardoc\|log\|tmp$',
-"   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
-"   \ }
-
-" Make CtrlP plugin use ag
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
