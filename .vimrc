@@ -116,7 +116,7 @@ map <leader>s <c-z>
 
 " Miscellaneous
 nnoremap <leader>n :NERDTree<CR>
-nnoremap <leader>r :windo e<CR>:CommandTFlush<CR>
+nnoremap <leader>r :windo e<CR>
 
 " ag over grep and ack
 set grepprg=ag\ --nogroup\ --nocolor\ --column
