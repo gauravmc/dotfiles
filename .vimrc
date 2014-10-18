@@ -14,7 +14,7 @@ Plugin 'gmarik/vundle'
 
 " My bundles
 Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-rails.git'
+Plugin 'tpope/vim-rails'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'mileszs/ack.vim'
 Plugin 'kchmck/vim-coffee-script'
@@ -26,7 +26,6 @@ Plugin 'matze/vim-move'
 Plugin 'tpope/vim-commentary'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/ruby-matchit'
-Plugin 'AndrewRadev/vim-eco'
 Plugin 'tpope/vim-bundler'
 Plugin 'wincent/command-t'
 
