@@ -61,3 +61,6 @@ stty stop undef
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# for rbenv shims and autocompletion
+eval "$(rbenv init -)"
