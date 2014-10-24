@@ -28,6 +28,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/ruby-matchit'
 Plugin 'tpope/vim-bundler'
 Plugin 'wincent/command-t'
+Plugin 'bling/vim-airline'
 
 " Go syntax
 set rtp+=$GOROOT/misc/vim
