@@ -40,7 +40,7 @@ syntax on
 set wildignore+=*/generated/*,*/tmp/*,*.so,*.swp,*.zip,*/log/*,*/.git/*,*/public/*,*/tags/*,*/node_modules/*,*/doc/*,*/vendor/*
 
 " line numbers
-" set number
+set number
 
 " Softtabs
 set tabstop=2
