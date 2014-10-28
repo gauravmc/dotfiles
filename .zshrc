@@ -53,6 +53,14 @@ alias sp="be spring"
 alias to="script/testonly"
 alias pc="be pry -r ./config/environment"
 
+# Funcs
+
+## open gem inside vim
+function bo {
+  local gem_path=`bundle show "$1"`
+  vim +":cd $gem_path"
+}
+
 export LOG_LEVEL=debug
 
 # Disable flow control commands (keeps C-s from freezing everything)
