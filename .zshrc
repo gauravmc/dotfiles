@@ -61,6 +61,10 @@ function bo {
   vim +":cd $gem_path"
 }
 
+function vssh {
+  vagrant ssh -- -t 'tmux -CC attach'
+}
+
 export LOG_LEVEL=debug
 
 # Disable flow control commands (keeps C-s from freezing everything)
