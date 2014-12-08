@@ -28,7 +28,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/ruby-matchit'
 Plugin 'tpope/vim-bundler'
 Plugin 'wincent/command-t'
-Plugin 'bling/vim-airline'
 
 " Go syntax
 set rtp+=$GOROOT/misc/vim
@@ -37,7 +36,7 @@ call vundle#end()
 filetype plugin indent on
 syntax on
 
-set wildignore+=*/generated/*,*/tmp/*,*.so,*.swp,*.zip,*/log/*,*/.git/*,*/public/*,*/tags/*,*/node_modules/*,*/doc/*,*/vendor/*
+set wildignore+=*/generated/*,*/tmp/*,*.so,*.swp,*.zip,*/log/*,*/.git/*,*/public/*,*/tags/*,*/node_modules/*,*/doc/*,vendor/*
 
 " line numbers
 set number
