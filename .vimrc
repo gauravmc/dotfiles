@@ -131,3 +131,6 @@ xnoremap p pgvy
 
 " Vim move plugin override default modifier
 let g:move_key_modifier = 'C'
+
+" Stop command-t from using git root as current dir
+let g:CommandTTraverseSCM = 'pwd'
