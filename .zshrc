@@ -57,6 +57,8 @@ alias spt="be spring testunit"
 alias sp="be spring"
 alias to="script/testonly"
 alias pc="be pry -r ./config/environment"
+alias tmcc="tmux -CC attach"
+alias tmnew="tmux new-session -s vagrant"
 
 # Funcs
 
@@ -64,10 +66,6 @@ alias pc="be pry -r ./config/environment"
 function bo {
   local gem_path=`bundle show "$1"`
   vim +":cd $gem_path"
-}
-
-function vssh {
-  vagrant ssh -- -t 'tmux -CC attach'
 }
 
 export LOG_LEVEL=debug
@@ -78,3 +76,9 @@ stty stop undef
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# Fix for SSH forwarding to reattached tmux session
+if [[ -S "$SSH_AUTH_SOCK" && ! -h "$SSH_AUTH_SOCK" ]]; then
+  ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock;
+fi
+export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock;
