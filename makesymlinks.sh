@@ -2,6 +2,7 @@
 
 dir=~/dotfiles
 olddir=~/dotfiles_old
+folders=".bundle"
 files=".bashrc .vimrc .bash_profile .zshrc .ctags .gitconfig .bundle/config .agignore .gitignore_global .tmux.conf"
 
 echo "Creating $olddir for backup of any existing dotfiles in ~"
@@ -9,6 +10,10 @@ mkdir -p $olddir
 
 echo "Changing to the $dir directory"
 cd $dir
+
+for folder in $folders; do
+  mkdir ~/$folder
+done
 
 for file in $files; do
   if test -f ~/$file && test -f $dir/$file; then
