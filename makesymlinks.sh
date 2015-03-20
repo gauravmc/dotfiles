@@ -12,7 +12,7 @@ cd $dir
 
 for file in $files; do
   if test -f ~/$file && test -f $dir/$file; then
-    echo "Moving any existing dotfiles from ~ to $olddir"
+    echo "Moving existing $file from ~ to $olddir"
     mv ~/$file ~/dotfiles_old/
   fi
 
