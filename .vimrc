@@ -62,7 +62,7 @@ set formatoptions-=o
 set formatoptions-=r
 
 " Color
-set background=dark
+set background=light
 colorscheme solarized
 
 set showmatch
@@ -122,9 +122,17 @@ set grepprg=ag\ --nogroup\ --nocolor\ --column
 nnoremap <leader>f :Ack<space>
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
-" have to paste code from github or something sometimes
-map <leader>p :set paste<CR>
-map <leader>P :set nopaste<CR>
+" automatically paste properly indented text with Cmd+P!
+let &t_SI .= "\<Esc>[?2004h"
+let &t_EI .= "\<Esc>[?2004l"
+
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
+function! XTermPasteBegin()
+  set pastetoggle=<Esc>[201~
+  set paste
+  return ""
+endfunction
 
 " paste multiple times
 xnoremap p pgvy
