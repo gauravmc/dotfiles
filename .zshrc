@@ -54,8 +54,8 @@ alias gc="git commit"
 alias gs="git status"
 alias gd="git diff"
 alias gb="git branch"
-alias spt="be spring testunit"
-alias sp="be spring"
+alias spt="bin/testunit"
+alias sp="bin/spring"
 alias to="script/testonly"
 alias pc="be pry -r ./config/environment"
 alias tmcc="tmux -CC attach"
@@ -83,3 +83,6 @@ if [[ -S "$SSH_AUTH_SOCK" && ! -h "$SSH_AUTH_SOCK" ]]; then
   ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock;
 fi
 export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock;
+
+# shopify PRY
+export PRY=1
