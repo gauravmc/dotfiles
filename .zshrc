@@ -60,6 +60,8 @@ alias to="script/testonly"
 alias pc="be pry -r ./config/environment"
 alias tmcc="tmux -CC attach"
 alias tmnew="tmux new-session -s vagrant"
+alias tt="be ruby -I test"
+alias ttall='be ruby -I.:test -e "ARGV.each{|f| require f}"'
 
 # Funcs
 
