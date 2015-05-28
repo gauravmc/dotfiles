@@ -36,7 +36,7 @@ call vundle#end()
 filetype plugin indent on
 syntax on
 
-set wildignore+=*/generated/*,*/tmp/*,*.so,*.swp,*.zip,*/log/*,*/.git/*,*/public/*,*/tags/*,*/node_modules/*,*/doc/*,vendor/*
+set wildignore+=*/generated/*,*/tmp/*,*.so,*.swp,*.zip,*/log/*,*/.git/*,*/public/*,tags/*,*/node_modules/*,*/doc/*,vendor/*
 
 " line numbers
 set number
