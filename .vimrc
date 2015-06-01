@@ -71,6 +71,7 @@ set incsearch
 set laststatus=2
 set hidden
 set autoread
+set tags=.tags
 
 " Yank copies to clipboard as well
 set clipboard=unnamed

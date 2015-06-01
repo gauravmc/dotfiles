@@ -1,3 +1,7 @@
-generated
-tags
-vendor/bundle
+./vendor/bundle
+./tmp
+./log
+*.log
+*.tags
+*.css
+*.scss
