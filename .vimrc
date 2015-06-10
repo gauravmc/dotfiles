@@ -62,7 +62,7 @@ set formatoptions-=o
 set formatoptions-=r
 
 " Color
-set background=light
+set background=dark
 colorscheme solarized
 
 set showmatch

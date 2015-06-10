@@ -17,7 +17,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/home/vagrant/.gem/ruby/2.1.5/bin:/usr/lib/shopify-ruby/2.1.5-shopify1/lib/ruby/gems/2.1.0/bin:/usr/lib/shopify-ruby/2.1.5-shopify1/bin:/usr/local/heroku/bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/vagrant/src/golang/bin"
+# export PATH="/home/vagrant/.gem/ruby/2.1.5/bin:/usr/lib/shopify-ruby/2.1.5-shopify1/lib/ruby/gems/2.1.0/bin:/usr/lib/shopify-ruby/2.1.5-shopify1/bin:/usr/local/heroku/bin:/usr/local/heroku/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/vagrant/src/golang/bin"
 
 # Detect os
 export PLATFORM=`uname`
