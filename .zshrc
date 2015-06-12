@@ -31,7 +31,7 @@ if [[ "$PLATFORM" == "Darwin" ]]; then
   # for rbenv shims and autocompletion
   eval "$(rbenv init -)"
 elif [[ "$PLATFORM" == "Linux" ]]; then
-  export GOPATH=$HOME/src/golang
+  export GOPATH=$HOME/src/go
   export PATH="$PATH:$GOPATH/bin"
 fi
 
