@@ -23,7 +23,6 @@ source $ZSH/oh-my-zsh.sh
 export PLATFORM=`uname`
 
 if [[ "$PLATFORM" == "Darwin" ]]; then
-  export EDITOR='mvim'
   export GOROOT=/usr/local/go
   export GOPATH=$HOME/Code/golang
   export PATH="/Users/gaurav/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/$GOPATH/bin:$PATH"
@@ -34,10 +33,10 @@ if [[ "$PLATFORM" == "Darwin" ]]; then
 elif [[ "$PLATFORM" == "Linux" ]]; then
   export GOPATH=$HOME/src/golang
   export PATH="$PATH:$GOPATH/bin"
-  export EDITOR='vim'
 fi
 
 # export MANPATH="/usr/local/man:$MANPATH"
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
