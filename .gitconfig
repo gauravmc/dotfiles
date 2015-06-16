@@ -16,6 +16,8 @@
 	ci = commit
 	st = status
 	di = diff
+  # Interactive rebase with the given number of latest commits
+  rei = "!r() { git rebase -i HEAD~$1; }; r"
 [merge]
 	tool = vimdiff
 [pull]
