@@ -61,6 +61,7 @@ alias tmcc="tmux -CC attach"
 alias tmnew="tmux new-session -s vagrant"
 alias tt="be ruby -I test"
 alias ttall='be ruby -I.:test -e "ARGV.each{|f| require f}"'
+alias bun='bundle install && ctags -f .tags .'
 
 # Funcs
 
