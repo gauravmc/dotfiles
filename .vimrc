@@ -54,7 +54,7 @@ set backspace=indent,eol,start
 
 " window minimum size
 set winwidth=80
-set winheight=30
+set winheight=35
 
 " Stop vim from automatically adding comment syntax
 " upon pressing enter and O/o
