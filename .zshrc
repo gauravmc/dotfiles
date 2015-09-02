@@ -30,6 +30,10 @@ if [[ "$PLATFORM" == "Darwin" ]]; then
 
   # for rbenv shims and autocompletion
   eval "$(rbenv init -)"
+
+  # nvm setup requirements
+  export NVM_DIR=~/.nvm
+  source $(brew --prefix nvm)/nvm.sh
 elif [[ "$PLATFORM" == "Linux" ]]; then
   export GOPATH=$HOME/src/go
   export PATH="$PATH:$GOPATH/bin"
@@ -88,3 +92,4 @@ export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock;
 
 # shopify PRY
 export PRY=1
+
