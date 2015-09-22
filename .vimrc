@@ -28,6 +28,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/ruby-matchit'
 Plugin 'tpope/vim-bundler'
 Plugin 'wincent/command-t'
+Plugin 'scrooloose/syntastic'
 
 " Go syntax
 set rtp+=$GOROOT/misc/vim
@@ -143,3 +144,15 @@ let g:move_key_modifier = 'C'
 
 " Stop command-t from using git root as current dir
 let g:CommandTTraverseSCM = 'pwd'
+
+" Syntactic configuration
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntactic_javascript_checkers = ['eslint', 'flow']
