@@ -40,7 +40,7 @@ syntax on
 set wildignore+=*/generated/*,*/tmp/*,*.so,*.swp,*.zip,*/log/*,*/.git/*,*/public/*,tags/*,*/node_modules/*,*/doc/*,vendor/*
 
 " line numbers
-set number
+set nonumber
 
 " Softtabs
 set tabstop=2
@@ -55,7 +55,7 @@ set backspace=indent,eol,start
 
 " window minimum size
 set winwidth=80
-set winheight=35
+set winheight=30
 
 " Stop vim from automatically adding comment syntax
 " upon pressing enter and O/o
