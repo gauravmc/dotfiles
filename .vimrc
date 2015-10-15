@@ -29,6 +29,7 @@ Plugin 'vim-scripts/ruby-matchit'
 Plugin 'tpope/vim-bundler'
 Plugin 'wincent/command-t'
 Plugin 'scrooloose/syntastic'
+Plugin 'itchyny/lightline.vim'
 
 " Go syntax
 set rtp+=$GOROOT/misc/vim
@@ -156,3 +157,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntactic_javascript_checkers = ['eslint', 'flow']
+
+" Lightline configuration
+
+let g:lightline = {'colorscheme': 'solarized'}
+
