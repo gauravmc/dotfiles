@@ -148,17 +148,26 @@ let g:CommandTTraverseSCM = 'pwd'
 
 " Syntactic configuration
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['eslint', 'flow']
+let g:syntastic_auto_jump = 2
+let g:syntastic_loc_list_height = 5
+let g:syntastic_stl_format = '[%E{%e error/s (line:%fe)}%B{, }%W{%w warning/s (line:%fw)}]'
 
 " Lightline configuration
 
-let g:lightline = {'colorscheme': 'solarized'}
+let g:lightline = {
+      \ 'colorscheme': 'solarized',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename', 'modified' ], [ 'syntastic' ] ]
+      \ },
+      \ 'component_expand': {
+      \   'syntastic': 'SyntasticStatuslineFlag',
+      \ },
+      \ 'component_type': {
+      \   'syntastic': 'warning',
+      \ }
+    \ }
 
