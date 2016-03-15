@@ -93,3 +93,5 @@ export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock;
 # shopify PRY
 export PRY=1
 
+
+[ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
