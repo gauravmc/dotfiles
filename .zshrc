@@ -99,3 +99,5 @@ export PRY=1
 export PATH="/Users/gaurav/.themekit:$PATH"
 
 export USE_LOCAL_SHOPIFY=1
+
+export PATH="$HOME/.yarn/bin:$PATH"
