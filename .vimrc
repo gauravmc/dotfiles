@@ -17,7 +17,6 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'mileszs/ack.vim'
-Plugin 'kchmck/vim-coffee-script'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-endwise'
@@ -64,7 +63,7 @@ set formatoptions-=o
 set formatoptions-=r
 
 " Color
-set background=light
+set background=dark
 colorscheme solarized
 
 set showmatch
@@ -170,4 +169,3 @@ let g:lightline = {
       \   'syntastic': 'warning',
       \ }
     \ }
-
