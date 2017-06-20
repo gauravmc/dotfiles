@@ -29,6 +29,7 @@ Plugin 'tpope/vim-bundler'
 Plugin 'wincent/command-t'
 Plugin 'scrooloose/syntastic'
 Plugin 'itchyny/lightline.vim'
+Plugin 'pangloss/vim-javascript'
 
 " Go syntax
 set rtp+=$GOROOT/misc/vim
@@ -63,7 +64,7 @@ set formatoptions-=o
 set formatoptions-=r
 
 " Color
-set background=dark
+set background=light
 colorscheme solarized
 
 set showmatch
