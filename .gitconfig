@@ -5,20 +5,21 @@
   ui = true
 [core]
   editor = vim
-	excludesfile = ~/.gitignore_global
+  excludesfile = ~/.gitignore_global
 [hub]
   protocol = https
 [push]
   default = current
 [alias]
-	co = checkout
-	br = branch
-	ci = commit
-	st = status
-	di = diff
+  co = checkout
+  br = branch
+  ci = commit
+  st = status
+  di = diff
+
   # Interactive rebase with the given number of latest commits
   rei = "!r() { git rebase -i HEAD~$1; }; r"
 [merge]
-	tool = vimdiff
+  tool = vimdiff
 [pull]
-	rebase = true
+  rebase = true
