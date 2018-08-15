@@ -1,22 +1,17 @@
-" Basic
-set nocompatible " No vi compatility
-let mapleader=","
+set nocompatible              " be iMproved, required
+filetype off                  " required
 
-filetype off
-filetype plugin indent off
-
-" vundle
+" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle
-Plugin 'gmarik/Vundle.vim'
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
 
 " My bundles
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'mileszs/ack.vim'
+Plugin 'ericbn/vim-solarized'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-endwise'
@@ -26,19 +21,26 @@ Plugin 'tpope/vim-commentary'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/ruby-matchit'
 Plugin 'tpope/vim-bundler'
-Plugin 'wincent/command-t'
-Plugin 'scrooloose/syntastic'
 Plugin 'itchyny/lightline.vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'wincent/command-t'
+Plugin 'mileszs/ack.vim'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-scripts/indentpython.vim'
 
-" Go syntax
-set rtp+=$GOROOT/misc/vim
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
 
-call vundle#end()
-filetype plugin indent on
-syntax on
+let mapleader=","
 
-set wildignore+=*/generated/*,*/tmp/*,*.so,*.swp,*.zip,*/log/*,*/.git/*,*/public/*,tags/*,*/node_modules/*,*/doc/*,vendor/*
+" Color scheme
+syntax enable
+set background=dark
+colorscheme solarized
+
+set wildignore+=*/generated/*,*/tmp/*,*.so,*.swp,*.zip,*/log/*,*/.git/*,*/public/*,tags/*,*/node_modules/*,*/doc/*,vendor/*,venv/*
 
 " line numbers
 set nonumber
@@ -54,26 +56,10 @@ set noswapfile
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-" window minimum size
-set winwidth=80
-set winheight=30
-
 " Stop vim from automatically adding comment syntax
 " upon pressing enter and O/o
 set formatoptions-=o
 set formatoptions-=r
-
-" Color
-set background=light
-colorscheme solarized
-
-set showmatch
-set matchtime=1
-set incsearch
-set laststatus=2
-set hidden
-set autoread
-set tags=.tags
 
 " Yank copies to clipboard as well
 set clipboard=unnamed
@@ -89,6 +75,16 @@ nnoremap <leader>D :tabclose<cr>
 
 command! W write
 
+" Miscellaneous settings
+set showmatch
+set matchtime=1
+set incsearch
+set laststatus=2
+set hidden
+set autoread
+set tags=.tags
+set encoding=utf-8
+
 """""""""""""""""""
 " Misc Key Mappings
 """""""""""""""""""
@@ -102,13 +98,13 @@ nnoremap <s-k> <c-w>k
 nnoremap <s-h> <c-w>h
 nnoremap <s-l> <c-w>l
 
+" Open new split panes to right and bottom, which feels more natural than Vim’s default
+set splitbelow
+set splitright
+
 " Git
 nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit<CR>
-
-" save
-map <c-s> <esc>:w<CR>
-imap <c-s> <esc>:w<CR>
 
 " Visually select the text that was last edited/pasted
 nnoremap gV `[v`]
@@ -146,16 +142,6 @@ let g:move_key_modifier = 'C'
 " Stop command-t from using git root as current dir
 let g:CommandTTraverseSCM = 'pwd'
 
-" Syntactic configuration
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_javascript_checkers = ['eslint', 'flow']
-let g:syntastic_auto_jump = 2
-let g:syntastic_loc_list_height = 5
-let g:syntastic_stl_format = '[%E{%e error/s (line:%fe)}%B{, }%W{%w warning/s (line:%fw)}]'
-
 " Lightline configuration
 
 let g:lightline = {
@@ -170,3 +156,18 @@ let g:lightline = {
       \   'syntastic': 'warning',
       \ }
     \ }
+
+" YCM modifications
+
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+"python with virtualenv support
+py << EOF
+import os
+import sys
+if 'VIRTUAL_ENV' in os.environ:
+  project_base_dir = os.environ['VIRTUAL_ENV']
+  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
+  execfile(activate_this, dict(__file__=activate_this))
+EOF
