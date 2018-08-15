@@ -3,7 +3,7 @@
 dir=~/dotfiles
 olddir=~/dotfiles_old
 folders=".bundle"
-files=".bashrc .vimrc .bash_profile .zshrc .ctags .gitconfig .bundle/config .agignore .gitignore_global .tmux.conf .pryrc .gemrc"
+files=".vimrc .zshrc .ctags .gitconfig .bundle/config .agignore .gitignore_global .pryrc .gemrc"
 
 echo "Creating $olddir for backup of any existing dotfiles in ~"
 mkdir -p $olddir
