@@ -23,3 +23,5 @@
   tool = vimdiff
 [pull]
   rebase = true
+[credential]
+  helper = osxkeychain
