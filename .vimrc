@@ -56,6 +56,10 @@ set noswapfile
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
+" window minimum size
+set winwidth=80
+set winheight=30
+
 " Stop vim from automatically adding comment syntax
 " upon pressing enter and O/o
 set formatoptions-=o
