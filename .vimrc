@@ -11,7 +11,7 @@ Plugin 'VundleVim/Vundle.vim'
 " My bundles
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
-Plugin 'ericbn/vim-solarized'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-endwise'
