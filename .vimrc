@@ -29,6 +29,10 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-scripts/indentpython.vim'
 
+Plugin 'mxw/vim-jsx'
+Plugin 'mattn/emmet-vim'
+Plugin 'elzr/vim-json'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -37,10 +41,10 @@ let mapleader=","
 
 " Color scheme
 syntax enable
-set background=dark
+set background=light
 colorscheme solarized
 
-set wildignore+=*/generated/*,*/tmp/*,*.so,*.swp,*.zip,*/log/*,*/.git/*,*/public/*,tags/*,*/node_modules/*,*/doc/*,vendor/*,venv/*
+set wildignore+=*/generated/*,*/tmp/*,*.so,*.swp,*.zip,*/log/*,*/.git/*,*/public/*,*/node_modules/*,*/doc/*,*/vendor/*
 
 " line numbers
 set nonumber
