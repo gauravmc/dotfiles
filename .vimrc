@@ -26,12 +26,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'wincent/command-t'
 Plugin 'mileszs/ack.vim'
 Plugin 'vim-syntastic/syntastic'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-scripts/indentpython.vim'
-
-Plugin 'mxw/vim-jsx'
-Plugin 'mattn/emmet-vim'
-Plugin 'elzr/vim-json'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -164,11 +159,6 @@ let g:lightline = {
       \   'syntastic': 'warning',
       \ }
     \ }
-
-" YCM modifications
-
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 "python with virtualenv support
 py << EOF
