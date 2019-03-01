@@ -131,3 +131,9 @@ function bo {
   local gem_path=`bundle show "$1"`
   vim +":cd $gem_path"
 }
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/gaurav/code/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/gaurav/code/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/gaurav/code/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/gaurav/code/google-cloud-sdk/completion.zsh.inc'; fi
