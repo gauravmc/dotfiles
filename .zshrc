@@ -107,6 +107,9 @@ alias gs="git status"
 alias gd="git diff"
 alias gb="git branch"
 
+# Make iTerm2 not ignore <C-s>. iTerm2 enables XON by default, which looks like a historical thing from iTerm 0.x.
+stty -ixon
+
 ## open gem inside vim
 function bo {
   local gem_path=`bundle show "$1"`

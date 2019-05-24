@@ -36,7 +36,7 @@ let mapleader=","
 
 " Color scheme
 syntax enable
-set background=dark
+set background=light
 colorscheme solarized
 
 set wildignore+=*/generated/*,*/tmp/*,*.so,*.swp,*.zip,*/log/*,*/.git/*,*/public/*,*/node_modules/*,*/doc/*,*/vendor/*,*/storage/*
