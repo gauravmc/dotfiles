@@ -27,6 +27,7 @@ Plugin 'wincent/command-t'
 Plugin 'mileszs/ack.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'vim-scripts/indentpython.vim'
+Plugin 'mxw/vim-jsx'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -36,7 +37,7 @@ let mapleader=","
 
 " Color scheme
 syntax enable
-set background=light
+set background=dark
 colorscheme solarized
 
 set wildignore+=*/generated/*,*/tmp/*,*.so,*.swp,*.zip,*/log/*,*/.git/*,*/public/*,*/node_modules/*,*/doc/*,*/vendor/*,*/storage/*

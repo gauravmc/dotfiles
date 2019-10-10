@@ -115,3 +115,11 @@ function bo {
   local gem_path=`bundle show "$1"`
   vim +":cd $gem_path"
 }
+
+# React Native Android Variables
+
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
