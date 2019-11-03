@@ -43,7 +43,7 @@ colorscheme solarized
 set wildignore+=*/generated/*,*/tmp/*,*.so,*.swp,*.zip,*/log/*,*/.git/*,*/public/*,*/node_modules/*,*/doc/*,*/vendor/*,*/storage/*
 
 " line numbers
-set nonumber
+set number
 
 " Softtabs
 set tabstop=2
