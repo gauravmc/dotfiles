@@ -11,7 +11,7 @@ Plugin 'VundleVim/Vundle.vim'
 " My bundles
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'lifepillar/vim-solarized8'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-endwise'
@@ -23,7 +23,7 @@ Plugin 'vim-scripts/ruby-matchit'
 Plugin 'tpope/vim-bundler'
 Plugin 'itchyny/lightline.vim'
 Plugin 'pangloss/vim-javascript'
-Plugin 'wincent/command-t'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'vim-scripts/indentpython.vim'
@@ -37,13 +37,14 @@ let mapleader=","
 
 " Color scheme
 syntax enable
-set background=dark
-colorscheme solarized
+set background=light
+set termguicolors
+colorscheme solarized8
 
 set wildignore+=*/generated/*,*/tmp/*,*.so,*.swp,*.zip,*/log/*,*/.git/*,*/public/*,*/node_modules/*,*/doc/*,*/vendor/*,*/storage/*
 
 " line numbers
-set number
+set nonumber
 
 " Softtabs
 set tabstop=2
@@ -146,7 +147,23 @@ let g:move_key_modifier = 'C'
 " Stop command-t from using git root as current dir
 let g:CommandTTraverseSCM = 'pwd'
 
+" CtrlP
+" Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+" ag is fast enough that CtrlP doesn't need to cache
+let g:ctrlp_use_caching = 0
+
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+
 " Lightline configuration
+
+set noshowmode
 
 let g:lightline = {
       \ 'colorscheme': 'solarized',
@@ -160,6 +177,17 @@ let g:lightline = {
       \   'syntastic': 'warning',
       \ }
     \ }
+
+" Syntastic defaults
+
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 
 "python with virtualenv support
 " py << EOF
