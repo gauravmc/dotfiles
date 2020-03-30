@@ -22,12 +22,12 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/ruby-matchit'
 Plugin 'tpope/vim-bundler'
 Plugin 'itchyny/lightline.vim'
-Plugin 'pangloss/vim-javascript'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'vim-scripts/indentpython.vim'
-Plugin 'mxw/vim-jsx'
+Plugin 'othree/yajs.vim'
+Plugin 'maxmellon/vim-jsx-pretty'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
