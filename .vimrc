@@ -37,9 +37,12 @@ let mapleader=","
 
 " Color scheme
 syntax enable
-set background=light
+set background=dark
 set termguicolors
 colorscheme solarized8
+
+" Syntax coloring lines that are too long just slows down the world
+set synmaxcol=128
 
 set wildignore+=*/generated/*,*/tmp/*,*.so,*.swp,*.zip,*/log/*,*/.git/*,*/public/*,*/node_modules/*,*/doc/*,*/vendor/*,*/storage/*
 
